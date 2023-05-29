@@ -52,13 +52,15 @@ function endRound(){
 
    
    function attackingType(mode){
-    let attackValue;
-    if (mode == "ATTACK"){
-        attackValue = ATTACK;
-    }
-    else {
-        attackValue = STRONG_ATTACK;
-    }
+    // let attackValue;
+
+    const attackValue = mode === 'ATTACK' ? ATTACK : STRONG_ATTACK;
+    // if (mode == "ATTACK"){
+    //     attackValue = ATTACK;
+    // }
+    // else {
+    //     attackValue = STRONG_ATTACK;
+    // }
     const damage = dealMonsterDamage(attackValue);
     currentMonsterHealth -= damage;
     endRound();
